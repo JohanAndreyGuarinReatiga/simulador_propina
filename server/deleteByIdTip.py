@@ -1,5 +1,5 @@
 import requests
 
 def optionTipFour(id):
-    response = requests.delete(f'https://6734e0705995834c8a9132ec.mockapi.io/propina/{id}')
+    response = requests.delete(f'https://67373485aafa2ef22233052c.mockapi.io/tip/{id}')
     return response.json()

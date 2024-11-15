@@ -1,10 +1,10 @@
-def calcular_propina(total, percentage):
+def calculate_tip(total, percentage):
     decimal = percentage / 100
     tip = decimal * total
     return tip
 
-def calcular_total_con_propina(total, tip):
+def calculate_all_w_tip(total, tip):
     return total + tip
 
-def dividir_total(total, personas):
+def divide_total(total, personas):
     return total / personas

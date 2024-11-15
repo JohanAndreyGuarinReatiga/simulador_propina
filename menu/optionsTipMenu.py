@@ -15,7 +15,7 @@ def design():
             6. Back
             =============================================
             ''')
-            options = int(input('Please choose an option (1-6): '))
+            options = int(input('\tPlease choose an option (1-6): '))
             if (options >= 1 and options <= 6):
                 return options
             else:

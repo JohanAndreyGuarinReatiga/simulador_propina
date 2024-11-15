@@ -1,4 +1,4 @@
-from formula.logic import calcular_propina, calcular_total_con_propina
+from formula.logic import calculate_tip, calculate_all_w_tip
 from server.saveTip import saveTip
 import os
 import keyboard
@@ -17,14 +17,14 @@ def design():
             percentage = int(input('Write the tip percentage (for example: 10, 15, 20):  % '))
             if(percentage < 0):
                 raise ValueError()
-            tip = calcular_propina(total, percentage)
-            totalPay = calcular_total_con_propina(total, tip)
+            tip = calculate_tip(total, percentage)
+            totalPay = calculate_all_w_tip(total, tip)
             print(f'''
             =============================================
             The tip is: $ {tip}
             The total with the tip is: $ {totalPay}
             =============================================''')
-            saveTip({'ammount': total, 'tip': tip, 'total to pay': totalPay, 'percentage': percentage})
+            saveTip({'ammount': total, 'tip': tip, 'TotalToPay': totalPay, 'percentage': percentage})
             option = int(input('Do you wish to calculate it again? (1 - S/0 - N): ')) 
             if (option == 0): return None
             os.system('clear')

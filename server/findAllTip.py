@@ -1,6 +1,6 @@
 import requests
 
 def optionTipOne():
-    response = requests.get('https://6734e0705995834c8a9132ec.mockapi.io/propina')
+    response = requests.get('https://67373485aafa2ef22233052c.mockapi.io/tip')
     return response.json()
 

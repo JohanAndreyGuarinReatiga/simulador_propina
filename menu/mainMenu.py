@@ -12,7 +12,7 @@ def design():
             3. Exit
             =============================================
             ''')
-            options = int(input('Please choose an option (1-3): '))
+            options = int(input('\tPlease choose an option (1-3): '))
             if (options >= 1 and options <= 3):
                 return options
             else:

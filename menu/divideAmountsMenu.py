@@ -1,4 +1,4 @@
-from formula.logic import calcular_propina, calcular_total_con_propina, dividir_total
+from formula.logic import calculate_tip, calculate_all_w_tip, divide_total
 import os
 import keyboard
 
@@ -20,13 +20,13 @@ def design():
             persons = int(input("\tEnter the ammount of persons : "))
             if(persons < 0):
                 raise ValueError()
-            tip = calcular_propina(total, percentage)
-            totalWithTip = calcular_total_con_propina(total, tip)
+            tip = calculate_tip(total, percentage)
+            totalWithTip = calculate_all_w_tip(total, tip)
             print(f"""
             =============================================
             The calculated tip is: ${tip}
             The total to pay is: ${totalWithTip}
-            Amount per person: ${dividir_total(totalWithTip, persons)}
+            Amount per person: ${divide_total(totalWithTip, persons)}
             =============================================""")
             opcion = int(input('Do you wish to calculate it again? (1 - S/0 - N): ')) 
             os.system('clear')
